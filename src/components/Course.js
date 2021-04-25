@@ -5,7 +5,6 @@ const Course = ({ match, history }) => {
 
     const [id] = useState(match.params.id);
     const [course, setCourse] = useState({
-        _id: '0',
         name: '',
         points: 0
     });
@@ -21,7 +20,7 @@ const Course = ({ match, history }) => {
     function changeHandler(e) {
        setCourse({
            ...course,
-           [e.target.name]: [e.target.value] 
+           [e.target.name]: e.target.value
        });
     }
 
